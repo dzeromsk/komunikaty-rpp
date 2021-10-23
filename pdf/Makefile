@@ -7,12 +7,12 @@ MD = $(PDF:.pdf=.md)
 
 all: $(MD)
 
-%.md: %.html
+%.md: | %.html
 	$(HTML2MD) -i $< > $@
 	sed -i '/data:image/d' $@
 	sed -i '/^$$/d' $@
 
-%.html: %.pdf
+%.html: | %.pdf
 	$(PDF2HTMLEX) --zoom 0 --process-outline 0 $<
 
 clean:
