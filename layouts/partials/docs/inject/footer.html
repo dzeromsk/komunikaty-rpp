@@ -1,0 +1,2 @@
+{{- $script := resources.Get "email-protection.js" | resources.Minify | resources.Fingerprint }}
+<script defer src="{{ $script.RelPermalink }}" {{ template "integrity" $script }}></script>

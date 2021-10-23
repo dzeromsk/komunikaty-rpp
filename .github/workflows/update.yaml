@@ -1,0 +1,25 @@
+name: update monetary policy council press releases
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/dzeromsk/nbp:latest
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GITHUB_PAT }}
+      - name: Update content
+        run: make update
+      - name: Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add pdf/ content/
+          git commit -m "Update Monetary Policy Council Press Releases"
+          git push

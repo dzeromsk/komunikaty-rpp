@@ -1,0 +1,10 @@
+baseURL: https://dzeromsk.github.io/komunikaty-rpp/
+title: Komunikaty RPP
+theme: ["email-protection", "book"]
+
+languageCode: en-us
+
+params:
+  BookTheme: "light"
+  BookToC: false
+  BookComments: false
