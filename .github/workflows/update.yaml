@@ -21,5 +21,5 @@ jobs:
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add pdf/ content/
-          git commit -m "Update Monetary Policy Council Press Releases"
+          git commit -m "Update Monetary Policy Council Press Releases" || true
           git push
