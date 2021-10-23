@@ -30,8 +30,8 @@ fix:
 	rm -r $(OUTPUT)/201[0-9]
 
 unfix:
-	mv -f $(OUTPUT)/200x/* $(OUTPUT)/
-	mv -f $(OUTPUT)/201x/* $(OUTPUT)/
+	mv -f $(OUTPUT)/200x/200[0-9] $(OUTPUT)/
+	mv -f $(OUTPUT)/201x/201[0-9] $(OUTPUT)/
 
 build:
 	$(HUGO) --minify
