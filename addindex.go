@@ -12,6 +12,7 @@ import (
 	"os"
 	"path/filepath"
 	"strconv"
+	"time"
 )
 
 var (
@@ -22,6 +23,8 @@ var frontMatter = template.Must(template.New("frontmatter").Parse(tpl))
 
 func main() {
 	flag.Parse()
+
+	now := time.Now()
 
 	files, err := ioutil.ReadDir(*dir)
 	if err != nil {
@@ -49,7 +52,7 @@ func main() {
 		defer f.Close()
 
 		collapsable := "true"
-		if year == 2021 {
+		if year == now.Year() {
 			collapsable = "false"
 		}
 		values := map[string]string{
