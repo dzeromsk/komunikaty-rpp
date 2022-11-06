@@ -66,6 +66,7 @@ func main() {
 func indexdir(dir string) map[int]struct{} {
 	index := map[int]struct{}{
 		// vacations
+		2022<<4 | 8: {},
 		2021<<4 | 8: {},
 		2020<<4 | 8: {},
 		2019<<4 | 8: {},
