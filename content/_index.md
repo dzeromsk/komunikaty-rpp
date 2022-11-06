@@ -36,4 +36,6 @@ Organami Narodowego Banku Polskiego są: prezes NBP, Rada Polityki Pieniężnej 
 
 ## O stronie
 
-Pliki html generowane automatycznie na podstwie [komunikatów z posiedzeń Rady Polityki Pieniężnej](https://www.nbp.pl/home.aspx?f=/polityka_pieniezna/dokumenty/komunikaty_rpp.html). W razie problemów technicznych można pisać pod adres {{< email-protection "dzeromsk+nbp@gmail.com" >}}
+Pliki html generowane automatycznie na podstwie [komunikatów z posiedzeń Rady Polityki Pieniężnej](https://www.nbp.pl/home.aspx?f=/polityka_pieniezna/dokumenty/komunikaty_rpp.html).
+
+Kontakt: {{< email-protection "dzeromsk+nbp@gmail.com" >}}
